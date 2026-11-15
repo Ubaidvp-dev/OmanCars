@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-subheading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+h3, h4, h5, h6 {
+    font-family: var(--font-subheading);
+    font-weight: 600;
+}
+
+p, li, span {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+#catagory-section{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.luxuary{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 70px;
+
+}
+body{
+    background-color: #fff;
+}
+.cards{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.35),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 10px 20px 10px;
+    width: auto;
+    height: auto;
+    background-color: black;
+    transition: transform 0.5s ease;
+}
+.cards:hover{
+    transform: scale(1.04);
+}
+
+.car-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.premium{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 70px;
+}
+.economy{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+
+}
+.main-heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: var(--font-heading);
+}
+.sub-heading{
+    margin-bottom: 30px;
+    font-family: var(--font-subheading);
+    color: #a88746;
+    font-size: 30px;
+}
+.rent-button{
+    border: none;
+    outline: none;
+    padding: 5px 25px 5px 25px;
+    background-color: #a88746;
+    color: #fff;
+    font-family: var(--font-body);
+    border-radius: 5px;
+    margin-top: 7px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.car-names{
+    font-size: 18px;
+    margin-bottom: 7px;
+    color: #fff;
+}
+.car-company-names{
+    font-size: 13px;
+}
+
+.card1-content p{
+    margin-bottom: 20px;
+    color:#a88746;
+}
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    
+}
+.whatsapp-icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Main section */
+#catagory-section {
+    width: 100%;
+    padding: 20px clamp(15px, 4vw, 60px);
+}
+
+/* All car category grids */
+.luxuary,
+.premium,
+.economy {
+    width: 100%;
+    max-width: 1400px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Car image sizing */
+/* .card1-image-section {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.car-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* Prevent long car names from overflowing */
+.car-names {
+    overflow-wrap: break-word;
+}
+
+/* ==============================
+   LARGE LAPTOPS & DESKTOPS
+================================ */
+
+@media (min-width: 1200px) {
+    .luxuary,
+    .premium,
+    .economy {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
+/* ==============================
+   LAPTOPS
+================================ */
+
+@media (max-width: 1199px) {
+    .luxuary,
+    .premium,
+    .economy {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+}
+
+/* ==============================
+   TABLETS
+================================ */
+
+@media (max-width: 768px) {
+    #catagory-section {
+        padding: 15px;
+    }
+
+    .luxuary,
+    .premium,
+    .economy {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .main-heading {
+        font-size: 27px;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .sub-heading {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        padding: 8px 8px 15px;
+    }
+
+    .car-names {
+        font-size: 16px;
+    }
+
+    .rent-button {
+        display: inline-block;
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ==============================
+   MOBILE PHONES
+================================ */
+
+@media (max-width: 480px) {
+    #catagory-section {
+        padding: 12px;
+    }
+
+    .luxuary,
+    .premium,
+    .economy {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .main-heading {
+        font-size: 23px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .sub-heading {
+        font-size: 23px;
+        margin-bottom: 18px;
+    }
+
+    .cards {
+        padding: 7px 7px 12px;
+    }
+
+    .car-names {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .card1-content p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .rent-button {
+        display: inline-block;
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .cards:hover {
+        transform: none;
+    }
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-icon {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* ==============================
+   VERY SMALL MOBILE PHONES
+================================ */
+
+@media (max-width: 360px) {
+    .luxuary,
+    .premium,
+    .economy {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .car-names {
+        font-size: 17px;
+    }
+
+    .rent-button {
+        font-size: 14px;
+    }
+}
+
+
