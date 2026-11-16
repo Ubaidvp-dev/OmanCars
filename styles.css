@@ -25,6 +25,7 @@ p, li, span {
     font-weight: 400;
 }
 
+
 #catagory-section{
    display: flex;
    flex-direction: column;
@@ -90,7 +91,7 @@ body{
 }
 .sub-heading{
     margin-bottom: 30px;
-    font-family: var(--font-subheading);
+    font-family: Georgia, serif;
     color: #a88746;
     font-size: 30px;
 }
