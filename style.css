@@ -204,6 +204,17 @@ li{
 
 /* MOBILE */
 @media (max-width: 500px) {
+      .car-image img,
+    .car-details {
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .car-details {
+        margin-bottom: 10px;
+    }
 
     .car-container {
         grid-template-columns: 1fr;
